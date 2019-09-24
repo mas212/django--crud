@@ -5,7 +5,7 @@
     <h4> Edit Member</h4>
 </div>
 {% include 'error.html' %}
-<form action="#" method="POST">
+<form action="{% url 'member:update' member_id=member.id %}" method="POST">
     {% csrf_token %}
     <div class="form-group row">
         <div class="col-6">

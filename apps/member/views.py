@@ -46,6 +46,27 @@ def edit(request, member_id):
     return render(request, 'edit.html', contex)
 
 def update(request, member_id):
+    errors = []
+
+    if request.method == "POST":
+        member        = m.Members.objects.get(id=member_id)
+        contex = {
+            'member' : member
+        }
+        try:
+            member.name         = request.POST['name'] 
+            member.position     = request.POST['position']  
+            member.age          = request.POST['age']
+            member.gender       = request.POST['gender']
+            member.phone        = request.POST['phone']
+            member.address      = request.POST['address']
+            member.save()
+            return redirect('member:index')
+        except:
+            messages.error(request, 'Member update error')
+            return render(request, 'edit.html', contex)
+    else:
+       return render(request, 'edit.html', contex) 
 
 def delete(request, member_id):
     member  = m.Members.objects.get(id=member_id)
