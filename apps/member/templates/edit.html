@@ -2,35 +2,35 @@
 
 {% block body %}
 <div class="col-md-12">
-    <h4>Member</h4>
+    <h4> Edit Member</h4>
 </div>
 {% include 'error.html' %}
-<form action="{% url 'member:store' %}" method="POST">
+<form action="#" method="POST">
     {% csrf_token %}
     <div class="form-group row">
         <div class="col-6">
             <label for="">Name</label>
-            <input name="name" type="text" class="form-control">
+            <input name="name" type="text" class="form-control" value="{{ member.name }}">
         </div>
         <div class="col-6">
             <label for="">position</label>
-            <input name="position" type="text" class="form-control">
+            <input name="position" type="text" class="form-control" value="{{ member.position}}">
         </div>
         <div class="col-6">
             <label for="">age</label>
-            <input name="age" type="text" class="form-control">
+            <input name="age" type="text" class="form-control" value="{{ member.age }}">
         </div>
         <div class="col-6">
             <label for="">gender</label>
-            <input name="gender" type="text" class="form-control">
+            <input name="gender" type="text" class="form-control" value="{{ member.gender }}">
         </div>
         <div class="col-6">
             <label for="">phone</label>
-            <input name="phone" type="text" class="form-control">
+            <input name="phone" type="text" class="form-control" value="{{ member.phone }}">
         </div>
         <div class="col-6">
             <label for="">address</label>
-            <input name="address" type="text" class="form-control">
+            <input name="address" type="text" class="form-control" value="{{ member.address }}">
         </div>
         <div class="col-auto" style="margin-top: 10px;">
             <button class="btn btn-primary">Create member</button>
