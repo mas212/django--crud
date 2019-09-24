@@ -1,0 +1,70 @@
+{% load static %}
+ <!-- Sidebar  -->
+ <nav id="sidebar">
+    <div class="sidebar-header">
+        <img src="{% static 'base/images/logo.png' %}">
+    </div>
+
+    <ul class="list-unstyled components">
+        <li>
+            <span class="navTitle">MENU</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-hdd"></i> 
+                Dashbord
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'member:index' %}">
+                <i class="fas fa-hdd"></i> 
+                Member
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-star"></i> 
+                Project
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-book"></i> 
+                Message
+           </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-calendar"></i> 
+                Email
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                 <i class="fas fa-calendar"></i>
+                File Management
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-trash"></i>
+                Cloud Storange
+            </a>
+        </li>
+        <li>
+            <span class="navTitle">ACCOUNT</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-trash"></i>
+                Settings
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-trash"></i>
+                Logout
+            </a>
+        </li>
+    </ul>
+</nav>

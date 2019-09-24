@@ -1,0 +1,462 @@
+/*
+    author : hari
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #1865b7;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #1865b7;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    margin-left: 18px;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+span.navTitle {
+    margin-left: 13px;
+    font-size: 12px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+.contentMid {
+    position: relative;
+    bottom: 20px;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    background: #fff;
+}
+/** content mid */
+.sidebar-header img{
+    width: 100%;
+}
+/** button **/
+.navbar-light,
+button#sidebarCollapse {
+    display: none;
+}
+/**************************************************************
+* FOLDER SETUP COL
+************************************************************* */
+.fullContentFolderList {
+    display: block;
+    border-right: 1px solid #f5efef;
+    height: 100vh;
+    background: #f7f5f5;
+    background-size: cover;
+}
+.folderHeaderIcon {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+.folderHeader {
+    font-size: 16px;
+    font-weight: 600;
+}
+.headerFolder {
+    margin-top: 16px;
+    padding: 7px 4px 7px 3px;
+    border-bottom: 1px solid #ece9e9;
+    display: block;
+    box-shadow: 0px 0px 1px #cccccc26;
+}
+.folderListWrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.folderListWrapper ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.folderListWrapper ul li{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.folderListWrapper ul li {
+    padding-bottom: 16px;
+    padding-top: 16px;
+    font-size: 14px;
+}
+.folderListWrapper ul li a {
+    color: #5d5757;
+}
+.boxCardListFolder {
+    margin-top: 20px;
+    padding-left: 4px;
+}
+.folderHeaderIcon ul{
+    list-style: none;
+    margin: 0;
+    padding:  0;
+}
+.folderHeaderIcon ul li{
+    display: inline-block;
+    margin-right: 11px;
+    margin-bottom: 9px
+}
+/*******************************
+* setup recent folder
+*******************************/
+.headerRecentFile {
+    margin-top: 15px;
+    padding-left: 0px;
+    margin-bottom: 5px;
+}
+.form {
+    padding-left: 15px;
+    padding-right: 0px;
+}
+.headIcon ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.rfolderList {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.headIcon ul li {
+    display: inline-block;
+    margin-right: 16px;
+    margin-top: 6px;
+    color: #565252;
+    font-size: 16px;
+}
+.rfolderListTitle {
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    height: 80px;
+}
+span.rTitle {
+    font-size: 13px;
+    color: #2f2c2c;
+}
+.rSize {
+    font-size: 12px;
+    padding-bottom: 9px;
+    color: #9e9c9c;
+    text-transform: uppercase;
+}
+#rMore {
+    padding-top: 18px;
+    padding-bottom: 16px;
+    text-align: center;
+    font-size: 11px;
+    color: #8a8484;
+    text-transform: uppercase;
+}
+.recentFileTitle h3 {
+    padding-left: 0px;
+    margin-left: -12px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.recentFileTitle {
+    padding-left: 13px;
+    padding-right: 0px;
+}
+#products h3,
+.rfolderContent h3{
+    padding-left: 0px;
+    margin-left: -9px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+/**** content recent folder ***/
+.rfcontentIcon {
+    font-size: 5em;
+    color: #696363;
+    text-align: center;
+}
+.rftitle {
+    font-size: 13px;
+    text-align: center;
+    color: #4e4c4c;
+}
+.rfsize {
+    color: #8a8888;
+    font-size: 11px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    margin-left: 14px;
+}
+.rfbox {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.rfolderContent {
+    padding-right: 0px;
+}
+.rMoreContent {
+    margin-top: 10px;
+}
+.rMoreArrow {
+    font-size: 19px;
+    color: #a09b9b;
+}
+/***
+*right content
+*/
+.accountAvatar img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.boxContent ul,
+.accountBox ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.accountBox ul li{
+    display: inline-block;
+    margin-left: 19px;
+}
+.accountBox {
+    margin-top: 20px;
+}
+.lastTitle h3 {
+    font-size: 15px;
+    margin-top: 21px;
+    margin-left: 18px;
+}
+.lastMember img{
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+}
+.boxContent {
+    padding-left: 16px;
+    padding-right: 7px;
+}
+.boxContent ul li {
+    font-size: 13px;
+    color: #6d6b6b;
+    margin-bottom: 22px;
+}
+span.memberName {
+    font-weight: bold;
+}
+span.memberTime {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #9a9696;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.boxContentRight{
+    border-left: 1px solid #eaeaea;
+    height: 100vh;
+}
+.dropdown-menu{
+    position: absolute!important;
+    transform: translate3d(-57px, 16px, 0px);
+    left: -18px!important;
+    will-change: transform;
+    width: 103px!important;
+    top: 19px!important;
+}
+#sidebar ul li.active>a, a[aria-expanded="true"] {
+    color: #000!important;
+    background: #ffffff!important;
+}
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    margin-top: -8px;
+}
+/************
+*list & grid
+**************/
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.item.list-group-item{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd){
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img{
+    float: left;
+}
+.item.list-group-item:after{
+    clear: both;
+}
+.list-group-item-text{
+    margin: 0 0 11px;
+}
+.card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.item{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.iconfile {
+    font-size: 38px;
+    text-align: center;
+    margin-left: 28px;
+}
+/****************
+*modal
+****************/
+.iconOpen {
+    border: 1px solid #ccc;
+    padding: 18px 4px 18px;
+    width: 20%;
+    text-align: center;
+    font-size: 22px;
+    color: #28a745;
+}

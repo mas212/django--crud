@@ -1,0 +1,126 @@
+{% extends 'base/base.html' %} 
+{% block body %}
+{% include 'base/midthContent.html' %}
+<div class="col-md-6">
+    <!--top header  recent file-->
+        <div class="row headerRecentFile">
+            <div class="col-md-8 form">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">
+                                <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 headIcon">
+                <ul>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-folder-open"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="list">
+                            <i class="fas fa-align-justify"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="grid">
+                            <i class="fas fa-th"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!-- end-->
+    <div id="products">
+        <h3>Recent File</h3>
+        <div class="row ">
+             <div class="item col-md-4 rfolderList">
+                 <div class="rfolderListTitle">
+                     <div class="boxCardListFolder">
+                        <span class="rIcon">
+                            <i class="fas fa-file"></i>
+                        </span> 
+                        <span class="rTitle">
+                            Linkedin App
+                        </span>
+                        <div class="rSize">10 mb</div>
+                     </div>
+                 </div>
+             </div>
+             <div class="item col-md-4 rfolderList">
+                <div class="rfolderListTitle">
+                    <div class="boxCardListFolder"> 
+                        <span class="rIcon">
+                                <i class="fas fa-file"></i>
+                        </span> 
+                        <span class="rTitle">
+                                Brand Guideline
+                        </span>
+                        <div class="rSize">10 mb</div>
+                    </div>
+                </div>
+             </div>
+             <div class="item col-md-4 rfolderList">
+                <div class="rfolderListTitle" id="rMore">
+                    <div class="rMoreContent">
+                         more
+                    </div>
+                    <div class="rMoreArrow">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+    <!-- end-->
+    <div id="products">
+        <h3>File</h3>
+        <div class="row">
+            <div class="item col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="rfcontentIcon">
+                            <i class="fas fa-file"></i>
+                        </div>
+                        <div class="rftitle">
+                            Linkedin App Design
+                        </div>
+                        <div class="rfsize">10mb</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="rfcontentIcon">
+                            <i class="fas fa-file"></i>
+                        </div>
+                        <div class="rftitle">
+                            Linkedin App Design
+                        </div>
+                        <div class="rfsize">10mb</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="rfcontentIcon">
+                            <i class="fas fa-file"></i>
+                        </div>
+                        <div class="rftitle">
+                            Linkedin App Design
+                        </div>
+                        <div class="rfsize">10mb</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'base/rightContent.html' %}
+{% endblock %}
